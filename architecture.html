@@ -9,39 +9,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <div class="container nav">
-        <div class="brand">Automatic Contract Summarizer <span class="badge">OSS</span></div>
-        <div class="spacer"></div>
-        <nav class="menu" aria-label="Primary">
-            <a href="architecture.html">Architecture</a>
-            <a href="contrib.html">Contrib</a>
-            <a href="development.html">Development</a>
-            <a href="dg.html">DG</a>
-            <a href="github.html">Github</a>
-            <a href="guide.html">Guide</a>
-            <a href="install.html">Install</a>
-            <a href="license.html">LICENSE</a>
-            <a href="privacy.html">Privacy</a>
+<header>
+    <div class="container">
+        <nav>
+            <a class="item" href="index.html">Home</a>
+            <a class="item" href="architecture.html">Architecture</a>
+            <a class="item" href="contrib.html">Contrib</a>
+            <a class="item" href="guide.html">Guide</a>
+            <a class="item" href="dg.html">DG</a>
+            <a class="item" href="github.html">Github</a>
+            <a class="item" href="install.html">Install</a>
+            <a class="item" href="license.html">LICENSE</a>
+            <a class="item" href="privacy.html">Privacy</a>
         </nav>
     </div>
 </header>
-
 
 <main>
     <section>
         <div class="container">
             <h1>Architecture</h1>
-            <p class="lead">High‑level flow from document ingestion to structured outputs.</p>
+            <h2>Technologies</h2>
+            <p class="lead">The architecture stack is composed of the following open source libraries and tools:</p>
             <ol>
-                <li><strong>Ingestion</strong> — PDFs/Word via folder or CLI.</li>
-                <li><strong>Pre‑processing</strong> — text extraction; optional OCR.</li>
-                <li><strong>Chunking</strong> — split to model‑sized passages.</li>
-                <li><strong>LLM Pass</strong> — prompted extraction to JSON schema.</li>
-                <li><strong>Post‑processing</strong> — normalize dates, currency, emails.</li>
-                <li><strong>Outputs</strong> — JSON + Markdown; optional CSV export.</li>
+                <li><strong>Python</strong> - The main programming language used to develop the AI tool.</li>
+                <li><strong>Huggingface</strong> - All LLM source files can be automatically downloaded from the site.
+                </li>
+                <li><strong>Torch/Transformers</strong> - These are the main libraries used to train the AI models.</li>
+                <li><strong>CUDA</strong> - Used to greatly improve speed with NVIDIA cards.</li>
             </ol>
-            <p class="small">You can swap models (local or hosted) without changing downstream steps.</p>
         </div>
     </section>
 </main>

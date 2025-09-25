@@ -1,30 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Install • Automatic Contract Summarizer</title>
-    <link href="assets/site.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="assets/site.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header"><div class="container nav"><div class="brand">Automatic Contract Summarizer <span class="badge">OSS</span></div><div class="spacer"></div><nav class="menu" aria-label="Primary">
-    <a href="architecture.html">Architecture</a>
-    <a href="contrib.html">Contrib</a>
-    <a href="development.html">Development</a>
-    <a href="dg.html">DG</a>
-    <a href="github.html">Github</a>
-    <a href="guide.html">Guide</a>
-    <a href="install.html">Install</a>
-    <a href="license.html">LICENSE</a>
-    <a href="privacy.html">Privacy</a>
-</nav></div></header>
+<header class="header">
+    <div class="container">
+        <nav>
+            <a class="item" href="index.html">Home</a>
+            <a class="item" href="architecture.html">Architecture</a>
+            <a class="item" href="contrib.html">Contrib</a>
+            <a class="item" href="guide.html">Guide</a>
+            <a class="item" href="dg.html">DG</a>
+            <a class="item" href="github.html">Github</a>
+            <a class="item" href="install.html">Install</a>
+            <a class="item" href="license.html">LICENSE</a>
+            <a class="item" href="privacy.html">Privacy</a>
+        </nav>
+    </div>
+</header>
 <main>
-    <section><div class="container">
-        <h1>Install</h1>
-        <h2>From source</h2>
-        <pre class="mono"># clone
+    <section>
+        <div class="container">
+            <h1>Install</h1>
+            <h2>From source</h2>
+            <pre class="mono"># clone
 git clone https://github.com/devgateway/automatic-contract-summarizer.git
 cd automatic-contract-summarizer
 
@@ -41,19 +47,12 @@ pip install -r requirements.txt
 # run (example)
 python -m summarizer --input ./samples --out outputs/
 </pre>
-        <h2>Docker (example)</h2>
-        <pre class="mono"># build
-docker build -t devgateway/contract-summarizer .
-
-
-# run
-docker run --rm -v $PWD/samples:/app/samples -v $PWD/outputs:/app/outputs \
-devgateway/contract-summarizer summarizer --input samples --out outputs
-</pre>
-        <p class="small">Check the README for authoritative steps.</p>
-    </div></section>
+        </div>
+    </section>
 </main>
-<footer><div class="container small">© Development Gateway</div></footer>
+<footer>
+    <div class="container small">© Development Gateway</div>
+</footer>
 <script src="assets/main.js"></script>
 </body>
 </html>
