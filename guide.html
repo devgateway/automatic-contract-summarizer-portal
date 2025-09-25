@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide • Automatic Contract Summarizer</title>
+    <link href="assets/site.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<header class="header"><div class="container nav"><div class="brand">Automatic Contract Summarizer <span class="badge">OSS</span></div><div class="spacer"></div><nav class="menu" aria-label="Primary">
+    <a href="architecture.html">Architecture</a>
+    <a href="contrib.html">Contrib</a>
+    <a href="development.html">Development</a>
+    <a href="dg.html">DG</a>
+    <a href="github.html">Github</a>
+    <a href="guide.html">Guide</a>
+    <a href="install.html">Install</a>
+    <a href="license.html">LICENSE</a>
+    <a href="privacy.html">Privacy</a>
+</nav></div></header>
+<main>
+    <section><div class="container">
+        <h1>Guide</h1>
+        <p class="lead">The latest README is embedded below.</p>
+        <div id="readme" class="readme"></div>
+        <p class="small">If this panel fails to load, view the README on <a target="_blank" rel="noopener" href="https://github.com/devgateway/automatic-contract-summarizer">GitHub</a>.</p>
+    </div></section>
+</main>
+<footer><div class="container small">© Development Gateway</div></footer>
+<script>
+    (async function(){
+        const el = document.getElementById('readme');
+        const url = 'https://raw.githubusercontent.com/devgateway/automatic-contract-summarizer/main/README.md';
+        try{
+            const res = await fetch(url,{cache:'no-store'});
+            if(!res.ok) throw new Error('HTTP '+res.status);
+            const md = await res.text();
+            el.innerHTML = marked.parse(md);
+        }catch(e){
+            el.innerHTML = '<div class="note">Could not load README. See the repository instead.</div>';
+        }
+    })();
+</script>
+<script src="assets/main.js"></script>
+</body>
+</html>
