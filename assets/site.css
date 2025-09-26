@@ -185,6 +185,12 @@ footer {
     color: var(--muted)
 }
 
+.footer-logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 6px
+}
+
 
 /* Responsive */
 @media (max-width: 860px) {
