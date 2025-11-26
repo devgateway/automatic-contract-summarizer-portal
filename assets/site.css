@@ -182,7 +182,8 @@ pre {
 
 footer {
     padding: 26px 0;
-    color: var(--muted)
+    color: var(--muted);
+    background-color: white;
 }
 
 .footer-logo {
